@@ -21,12 +21,9 @@ app.use(cors());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.error('MongoDB Connection Error:', err));
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log(" MongoDB Connected"))
+  .catch(err => console.error(" MongoDB connection error:", err));
 
 // Routes
 app.use('/api/auth', authRoutes);
