@@ -148,7 +148,7 @@ const Profile = () => {
             alt="profile"
             src={
               profileData?.profilePic
-                ? `http://localhost:4000${profileData.profilePic}`
+                ? `https://tweeter-clone-fmm2.onrender.com${profileData.profilePic}`
                 : '/default.jpg'
             }
           />

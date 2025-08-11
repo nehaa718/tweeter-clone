@@ -50,7 +50,7 @@ const Sidebar = () => {
           <img
   src={
     userInfo.profilePic
-      ? `http://localhost:4000${userInfo.profilePic}`
+      ? `https://tweeter-clone-fmm2.onrender.com${userInfo.profilePic}`
       : 'https://i.pinimg.com/736x/62/01/0d/62010d848b790a2336d1542fcda51789.jpg'
   }
   alt="User Avatar"
