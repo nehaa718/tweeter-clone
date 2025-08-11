@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:4000/api', // Change to your backend URL
+  baseURL: 'https://tweeter-clone-fmm2.onrender.com/api', // ✅ Render backend + /api
   headers: {
     'Content-Type': 'application/json',
   },
