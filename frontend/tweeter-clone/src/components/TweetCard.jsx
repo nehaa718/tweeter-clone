@@ -25,9 +25,11 @@ const TweetCard = ({ item, refreshSingleTweet }) => {
   const [retweetCount, setRetweetCount] = useState(0);
 
   const getFullImageUrl = (path) => {
-    if (!path) return '/default.jpg';
-    return path.startsWith('http') ? path : `http://localhost:4000${path}`;
-  };
+  if (!path) return '/default.jpg';
+  const baseUrl = 'https://tweeter-clone-fmm2.onrender.com'; // backend ka render URL
+  return path.startsWith('http') ? path : `${baseUrl}${path}`;
+};
+
 
   useEffect(() => {
     setLiked(item.likes.includes(userInfo?._id));
